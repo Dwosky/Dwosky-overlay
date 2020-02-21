@@ -27,11 +27,6 @@ RDEPEND="
 	net-analyzer/rrdtool[graph,perl]
 	dev-perl/CGI"
 
-pkg_setup() {
-	enewgroup ${PN}
-	enewuser ${PN} -1 -1 /var/lib/${PN} ${PN}
-}
-
 src_prepare() {
 	# Put better Gentoo defaults in the configuration file.
 	sed -e "s|\(base_dir.*\)/usr/share/${PN}|\1/usr/share/${PN}/htdocs|" \
