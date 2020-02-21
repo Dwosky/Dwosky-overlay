@@ -1,4 +1,4 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="7"
@@ -11,7 +11,7 @@ SRC_URI="https://www.monitorix.org/${P}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-perl/Config-General
@@ -35,7 +35,7 @@ src_prepare() {
 		-e "s|\(secure_log.*\)/var/log/secure|\1/var/log/auth.log|" \
 		-e "s|nobody|${PN}|g" -i ${PN}.conf || die
 	# Update systemd binary location
-	sed -e "s|/usr/bin|/usr/sbin|g" -i docs/${PN}.service
+	sed -e "s|/usr/bin|/usr/sbin|g" -i docs/${PN}.service || die
 	eapply_user
 }
 
@@ -94,12 +94,12 @@ pkg_postinst() {
 	elog "  app-admin/hddtemp   (disk drive temperatures and health)"
 	elog "  mail-mta/postfix    (email reports/statics)"
 	elog "  mail-mta/sendmail   (email reports/statics)"
-	elog "  sys-apps/lm_sensors (lm_sensors and GPU temperatures)"
+	elog "  sys-apps/lm-sensors (lm-sensors and GPU temperatures)"
 	elog "  sys-power/apcupsd   (APC UPS statistics)"
 	elog "  sys-power/nut       (Network UPS Tools statistics)"
 	elog
 	elog "If you wish to use your own web server:"
-	elog "  Web data can be found at: ${EROOT%/}/var/lib/${PN}/www/"
+	elog "  Web data can be found at: ${EROOT}/var/lib/${PN}/www/"
 	elog "  Also please check the correct user and group ownership"
-	elog "  of ${EROOT%/}/var/lib/${PN}/www/imgs/"
+	elog "  of ${EROOT}/var/lib/${PN}/www/imgs/"
 }
