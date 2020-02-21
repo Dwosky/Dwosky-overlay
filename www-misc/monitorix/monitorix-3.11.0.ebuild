@@ -14,7 +14,10 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND="dev-perl/Config-General
+RDEPEND="
+	acct-user/monitorix
+	acct-group/monitorix
+	dev-perl/Config-General
 	dev-perl/DBI
 	dev-perl/HTTP-Server-Simple
 	dev-perl/IO-Socket-SSL
