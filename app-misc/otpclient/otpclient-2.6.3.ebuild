@@ -39,7 +39,7 @@ src_configure() {
 	local mycmakeargs=(
 		-DCMAKE_INSTALL_PREFIX=/usr ..
     )
-    cmake-utils_src_configure
+    cmake_src_configure
 }
 
 pkg_postinst() {
