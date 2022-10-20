@@ -35,8 +35,11 @@ RDEPEND="
 	>=media-libs/libpng-1.2.0
 "
 
-src_configure() {
+src_prepare() {
 	cmake_src_prepare
+}
+
+src_configure() {
 	local mycmakeargs=(
 		-DCMAKE_INSTALL_PREFIX=/usr ..
     )
