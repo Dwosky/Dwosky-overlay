@@ -8,6 +8,7 @@ inherit autotools cmake xdg-utils
 DESCRIPTION="Simple GTK+ v3 OTP client (TOTP and HOTP)"
 HOMEPAGE="https://github.com/paolostivanin/OTPClient"
 SRC_URI="https://github.com/paolostivanin/OTPClient/archive/v${PV}.zip -> ${P}.zip"
+S="${WORKDIR}/OTPClient-${PV}"
 
 LICENSE="GPL-3"
 SLOT="0"
