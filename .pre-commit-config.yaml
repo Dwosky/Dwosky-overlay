@@ -11,4 +11,12 @@ repos:
     rev: v0.9.0.2
     hooks:
       - id: shellcheck
+  # pkgdev
+  - repo: local
+    hooks:
+      - id: generate-manifest
+        name: generate manifest
+        language: system
+        files: ebuild
+        entry: pkgdev manifest
 ...
