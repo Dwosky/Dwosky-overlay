@@ -15,26 +15,26 @@ inherit java-pkg-opt-2 python-single-r1 prefix toolchain-funcs xdg-utils
 DESCRIPTION="A full office productivity suite. Binary package"
 HOMEPAGE="https://www.libreoffice.org"
 SRC_URI_AMD64="
-	${BASE_AMD64_URI}libreoffice-${PVR}.tar.xz
+	${BASE_AMD64_URI}libreoffice-${PV}.tar.xz
 	kde? (
-		!java? ( ${BASE_AMD64_URI}libreoffice-kde-${PVR}.xd3 )
-		java? ( ${BASE_AMD64_URI}libreoffice-kde-java-${PVR}.xd3 )
+		!java? ( ${BASE_AMD64_URI}libreoffice-kde-${PV}.xd3 )
+		java? ( ${BASE_AMD64_URI}libreoffice-kde-java-${PV}.xd3 )
 	)
 	gnome? (
-		!java? ( ${BASE_AMD64_URI}libreoffice-gnome-${PVR}.xd3 )
-		java? ( ${BASE_AMD64_URI}libreoffice-gnome-java-${PVR}.xd3 )
+		!java? ( ${BASE_AMD64_URI}libreoffice-gnome-${PV}.xd3 )
+		java? ( ${BASE_AMD64_URI}libreoffice-gnome-java-${PV}.xd3 )
 	)
 	!kde? ( !gnome? (
-		java? ( ${BASE_AMD64_URI}libreoffice-java-${PVR}.xd3 )
+		java? ( ${BASE_AMD64_URI}libreoffice-java-${PV}.xd3 )
 	) )
 "
 SRC_URI_X86="
-	${BASE_X86_URI}libreoffice-${PVR}.tar.xz
+	${BASE_X86_URI}libreoffice-${PV}.tar.xz
 	kde? (
-		${BASE_X86_URI}libreoffice-kde-${PVR}.xd3
+		${BASE_X86_URI}libreoffice-kde-${PV}.xd3
 	)
 	gnome? (
-		${BASE_X86_URI}libreoffice-gnome-${PVR}.xd3
+		${BASE_X86_URI}libreoffice-gnome-${PV}.xd3
 	)
 "
 
