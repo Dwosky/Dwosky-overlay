@@ -13,7 +13,10 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
 
-DEPEND=""
+DEPEND="
+  acct-group/ntfy
+	acct-user/ntfy
+"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
